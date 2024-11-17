@@ -83,7 +83,7 @@ def query_backend(query: str) -> Dict[str, Any]:
     for attempt in range(max_retries):
         try:
             response = requests.post(
-                "http://localhost:5001/query",
+                "https://backend-server-ffo7.onrender.com/query",
                 json={"query": query},
                 headers={"Content-Type": "application/json"},
                 timeout=50
