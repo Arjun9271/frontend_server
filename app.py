@@ -11,6 +11,8 @@ def apply_custom_css():
         .stApp {
             max-width: 1200px;
             margin: 0 auto;
+            background-color: #ffffff;  /* Set background color to white */
+            color: black;  /* Ensure text is black */
         }
         
         .main-header {
@@ -36,6 +38,7 @@ def apply_custom_css():
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 2rem;
+            color: black;  /* Ensure text inside results is black */
         }
         
         .source-link {
@@ -71,6 +74,10 @@ def apply_custom_css():
             padding: 1rem;
             border-radius: 5px;
             margin: 1rem 0;
+        }
+        
+        .stMarkdown, .stText, .stHeader, .stSubheader, .stCode {
+            color: black;  /* Ensure text is black across various elements */
         }
         </style>
     """, unsafe_allow_html=True)
@@ -152,7 +159,7 @@ def main():
         unsafe_allow_html=True
     )
 
-        # Search container
+    # Search container
     st.markdown('<div class="search-container">', unsafe_allow_html=True)
 
     # Create a form for input
